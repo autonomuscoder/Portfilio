@@ -31,7 +31,7 @@ body {
   padding: 1.5rem;
   background-color: var(--contrast-clr);
   margin-bottom: 0.7rem;
-  width: 40vw;
+  max-width: 40vw;
   margin-left: 58vw;
   margin-top: 1.6rem;
   border-radius: 16px;
@@ -59,10 +59,11 @@ body {
 .hero-wrapper {
   display: flex;
   height: 80vh;
+  max-width: 100%;
 }
 
 .img-wrapper img {
-  width: 18rem;
+  max-width: 18rem;
   height: 27rem;
   margin: 3rem;
   margin-left: 7rem;
@@ -109,7 +110,7 @@ body {
   text-align: center;
   margin-top: 2rem;
   height: 100vh;
-  animation: fade-in linear;
+  animation: fade-in linear forwards;
   animation-timeline: view();
   animation-range: contain -400px;
 }
@@ -131,13 +132,13 @@ body {
   justify-content: center;
   background: var(--contrast-clr);
   height: 9rem;
-  width: 12rem;
+  max-width: 12rem;
   margin: 1.5rem 5.6rem;
   border-radius: 15px;
 }
 
 .card-img {
-  width: 4rem;
+  max-width: 4rem;
   height: 4rem;
 }
 
@@ -149,13 +150,18 @@ body {
   }
 }
 
-/* @media only screen and (max-width: 1200px) { */
-/*   .planet { */
-/*     display: none; */
-/*   } */
-/**/
-/* .message-wrapper { */
-/*   margin-top: 9rem; */
-/*   margin-left: 15rem; */
-/* } */
-/* } */
+@media only screen and (max-width: 1200px) {
+  .planet {
+    display: none;
+  }
+
+  .message-wrapper {
+    margin-top: 9rem;
+    margin-left: 15rem;
+  }
+
+  .bar-wrapper {
+    margin-left: auto;
+  }
+
+}
