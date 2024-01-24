@@ -1,5 +1,5 @@
 # Portfolio site
-Learning to Build Personal Portfolio site ( under construction )
+Learning to Build Personal Portfolio site & version control ( under construction )
 
 ## Goals
 - Add my works and actually complete the pages
