@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --bg-clr: #121212;
+  --txt-clr: white;
+  --hover-clr: aquamarine;
+  --contrast-clr: #1b1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--txt-clr);
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-clr);
+  color: var(--txt-clr);
+  font-family: Manrope, 'sans-serif';
+}
+
+.bar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: var(--contrast-clr);
+  margin-bottom: 0.7rem;
+  width: 40vw;
+  margin-left: 58vw;
+  margin-top: 1.6rem;
+  border-radius: 16px;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link-wrapper {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.link-wrapper li {
+  list-style: none;
+}
+
+.link-wrapper a {
+  transition: all ease 0.3s;
+}
+
+.link-wrapper a:hover {
+  display: block;
+  transform: translateY(-3px);
+}
+
+.hero-wrapper {
+  display: flex;
+  height: 80vh;
+}
+
+.img-wrapper img {
+  width: 18rem;
+  height: 27rem;
+  margin: 3rem;
+  margin-left: 7rem;
+}
+
+.message-wrapper {
+  margin-top: 9rem;
+  margin-left: 5rem;
+}
+
+.planet {
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-right: auto
+}
+
+.planet img {
+  height: 27rem;
+}
+
+.about {
+  scale: 0.7;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: contain;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  margin-top: 1.2rem;
+  height: 50vh;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.skill-wrapper {
+  scale: 0.7;
+  opacity: 0;
+  text-align: center;
+  margin-top: 2rem;
+  height: 100vh;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: contain -400px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: var(--contrast-clr);
+  height: 9rem;
+  width: 12rem;
+  margin: 1.5rem 5.6rem;
+  border-radius: 15px;
+}
+
+.card-img {
+  width: 4rem;
+  height: 4rem;
+}
+
+@keyframes fade-in {
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+/* @media only screen and (max-width: 1200px) { */
+/*   .planet { */
+/*     display: none; */
+/*   } */
+/**/
+/* .message-wrapper { */
+/*   margin-top: 9rem; */
+/*   margin-left: 15rem; */
+/* } */
+/* } */
