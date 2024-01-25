@@ -25,22 +25,31 @@ body {
   font-family: Manrope, 'sans-serif';
 }
 
+
 .bar-wrapper {
   display: flex;
+  padding: 0.8rem;
+  align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
   background-color: var(--contrast-clr);
   margin-bottom: 0.7rem;
   max-width: 40vw;
   margin-left: 58vw;
   margin-top: 1.6rem;
-  border-radius: 16px;
+  border-radius: 46px;
   box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-wrapper img{
+  max-width: 70px;
+  min-height: 70px;
+  border-radius: 50%;
 }
 
 .link-wrapper {
   display: flex;
   gap: 0.4rem;
+  margin-right: 0.7rem;
 }
 
 .link-wrapper li {
@@ -54,6 +63,7 @@ body {
 .link-wrapper a:hover {
   display: block;
   transform: translateY(-3px);
+  text-decoration: underline;
 }
 
 .hero-wrapper {
@@ -77,10 +87,12 @@ body {
 .planet {
   padding: 1rem;
   margin-top: 3rem;
+  margin-left: 7rem;
 }
 
 .planet img {
-  min-height: 27rem;
+  min-height: 29rem;
+  margin-left: 2rem;
 }
 
 .about {
@@ -125,14 +137,14 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 2.5rem;
   text-align: center;
   align-items: center;
   justify-content: center;
   background: var(--contrast-clr);
   min-height: 9rem;
   max-width: 12rem;
-  margin: 1.5rem 5.6rem;
+  margin: 2.5rem 4.3rem;
   border-radius: 15px;
 }
 
@@ -160,6 +172,10 @@ body {
     margin-top: auto;
     text-align: center;
   }
+
+.img-wrapper img {
+   margin: 0 auto;
+}
 
   .message-wrapper {
     margin: 0 auto;
