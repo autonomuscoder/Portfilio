@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
+  /* --body-bg-clr: radial-gradient(#00002e, #3d005c); */
   --bg-clr: #121212;
   --txt-clr: white;
   --hover-clr: aquamarine;
   --contrast-clr: #1b1c1c;
-  --nav-bg-clr: hsla(0, 0, 0, 0.9);
+  --nav-bg-clr: hsla(0, 0%, 7%, 0.7);
 }
 
 * {
@@ -17,6 +18,11 @@
 a {
   text-decoration: none;
   color: var(--txt-clr);
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 body {
@@ -86,7 +92,7 @@ body::-webkit-scrollbar-track {
   max-width: 5rem;
   min-height: 100vh;
   position: fixed;
-  background: var(--nav-bg-clr);
+  background: var(--contrast-clr);
   backdrop-filter: blur(0.8rem);
   padding: 2rem 4rem;
   transition: all ease 0.5s;
@@ -99,6 +105,7 @@ body::-webkit-scrollbar-track {
 
 .navbar:hover {
   max-width: 16rem;
+  background: var(--nav-bg-clr);
 }
 
 .navbar:hover .nav-text {
@@ -108,10 +115,11 @@ body::-webkit-scrollbar-track {
 .logo {
   display: block;
   font-size: 1.8rem;
+  font-weight: 700;
   letter-spacing: 0.3rem;
   transition: all ease 0.5s;
   transform: rotate(0deg);
-  background: -webkit-linear-gradient(#549eac, #c94d76);
+  background: -webkit-linear-gradient(#bebebe, #161616);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
 }
@@ -272,11 +280,29 @@ main {
   max-width: 12rem;
   margin: 2.5rem 4.3rem;
   border-radius: 15px;
+  transition: all ease 0.3s;
+}
+
+.card:hover {
+  background: aquamarine;
+  color: var(--bg-clr);
+  box-shadow: 0 0 1rem aquamarine;
 }
 
 .card-img {
   max-width: 4rem;
   min-height: 4rem;
+}
+
+#foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/foot-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+  margin-bottom: 1.1rem;
 }
 
 @keyframes fade-in {
@@ -296,7 +322,8 @@ main {
  .mob-navbar {
       padding: 1rem;
       display: flex;
-      background: var(--contrast-clr);
+      background: var(--nav-bg-clr);
+      backdrop-filter: blur(10px);
       /* width: 40vw; */
       width: 100vw;
       box-shadow:  #111111 -3px 5px;
