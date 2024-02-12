@@ -2,11 +2,14 @@
 
 :root {
   /* --body-bg-clr: radial-gradient(#00002e, #3d005c); */
-  --bg-clr: #121212;
+  /* --bg-clr: #121212; */
+  --bg-clr: linear-gradient(00deg, #332a45, #0e0e14);
   --txt-clr: white;
+  --dark-txt-clr: #121212;
   --hover-clr: aquamarine;
   --contrast-clr: #1b1c1c;
-  --nav-bg-clr: hsla(0, 0%, 7%, 0.7);
+  --card-bg-clr: #2f2e42;
+  --nav-bg-clr: hsla(0, 0%, 0%, 0.5);
 }
 
 * {
@@ -92,8 +95,8 @@ body::-webkit-scrollbar-track {
   max-width: 5rem;
   min-height: 100vh;
   position: fixed;
-  background: var(--contrast-clr);
-  backdrop-filter: blur(0.8rem);
+  background: var(--nav-bg-clr);
+  backdrop-filter: blur(0.3rem);
   padding: 2rem 4rem;
   transition: all ease 0.5s;
   z-index: 9999;
@@ -166,7 +169,7 @@ main {
   margin: 3rem;
   margin-left: 7rem;
   border-radius: 0.4rem;
-  box-shadow: 0 0 1em 0 hsl(900, 40%, 85%);
+  box-shadow: 0 0 1em 0 hsl(229, 35%, 75%);
 }
 
 
@@ -228,6 +231,7 @@ main {
   background-repeat: no-repeat;
   min-height: 40vh;
   z-index: 1;
+  box-shadow: 0 0 1em 0 hsl(229, 35%, 75%);
 }
 
 .about::before {
@@ -238,7 +242,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.9);
+  background-color: rgba(26, 27, 38, 0.6);
   backdrop-filter: blur(0.4rem);
   border-radius: 16px;
   z-index: 0;
@@ -275,7 +279,7 @@ main {
   text-align: center;
   align-items: center;
   justify-content: center;
-  background: var(--contrast-clr);
+  background: var(--card-bg-clr);
   min-height: 9rem;
   max-width: 12rem;
   margin: 2.5rem 4.3rem;
@@ -285,7 +289,7 @@ main {
 
 .card:hover {
   background: aquamarine;
-  color: var(--bg-clr);
+  color: var(--dark-txt-clr);
   box-shadow: 0 0 1rem aquamarine;
 }
 

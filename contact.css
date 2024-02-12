@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 :root {
-  --bg-clr: #121212;
+  /* --body-bg-clr: radial-gradient(#00002e, #3d005c); */
+  /* --bg-clr: #121212; */
+  --bg-clr: linear-gradient(00deg, #332a45, #0e0e14);
   --txt-clr: white;
+  --dark-txt-clr: #121212;
+  --hover-clr: aquamarine;
   --contrast-clr: #1b1c1c;
-  --nav-bg-clr: hsla(0, 0, 0, 0.9);
-
+  --card-bg-clr: #2f2e42;
+  --nav-bg-clr: hsla(0, 0%, 0%, 0.5);
 }
+
 
 * {
   margin: 0;
