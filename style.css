@@ -37,56 +37,21 @@ body {
   overflow-x: hidden;
 }
 
-/* need more info on styling scrollbar */
-
+/* scrollbar (doesn't work on firefox)*/
 body::-webkit-scrollbar {
   width: 1rem;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--contrast-clr);
+  background: #1e1e26;
 }
 
+body::-webkit-scrollbar-thumb {
+  background: #7aa2f7;
+  border-radius: 100vw;
+  box-shadow: 0 0 1em #7aa2f7;
+}
 
-/* .bar-wrapper { */
-/*   display: flex; */
-/*   padding: 0.8rem; */
-/*   align-items: center; */
-/*   justify-content: space-between; */
-/*   background-color: var(--contrast-clr); */
-/*   margin-bottom: 0.7rem; */
-/*   max-width: 40vw; */
-/*   margin-left: 58vw; */
-/*   margin-top: 1.6rem; */
-/*   border-radius: 46px; */
-/*   box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.1); */
-/* } */
-/**/
-/* .logo-wrapper img{ */
-/*   max-width: 70px; */
-/*   min-height: 70px; */
-/*   border-radius: 50%; */
-/* } */
-/**/
-/* .link-wrapper { */
-/*   display: flex; */
-/*   gap: 0.4rem; */
-/*   margin-right: 0.7rem; */
-/* } */
-/**/
-/* .link-wrapper li { */
-/*   list-style: none; */
-/* } */
-/**/
-/* .link-wrapper a { */
-/*   transition: all ease 0.3s; */
-/* } */
-/**/
-/* .link-wrapper a:hover { */
-/*   display: block; */
-/*   transform: translateY(-3px); */
-/*   text-decoration: underline; */
-/* } */
 
 /* trying for a side navbar */
 .navbar {
@@ -211,11 +176,7 @@ main {
 }
 
 .about {
-/*  opacity: 0;
-  animation: fade-in linear forwards;
-  animation-range: contain;*/
   display: flex;
-  /* animation-timeline: view(); */
   border-radius: 16px;
   position: relative;
   flex-direction: column;
@@ -261,7 +222,6 @@ main {
   text-align: center;
   margin-top: 8rem;
   min-height: 100vh;
-  /* animation: fade-in linear forwards; */
 }
 
 .card-wrapper {
