@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap');
 
 :root {
   /* --body-bg-clr: radial-gradient(#00002e, #3d005c); */
@@ -17,6 +18,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  padding: 3rem;
+  scroll-snap-align: start;
 }
 
 a {
@@ -39,104 +50,53 @@ body::-webkit-scrollbar-track {
   background: var(--contrast-clr);
 }
 
-/* .bar-wrapper { */
-/*   display: flex; */
-/*   padding: 0.8rem; */
-/*   align-items: center; */
-/*   justify-content: space-between; */
-/*   background-color: var(--contrast-clr); */
-/*   margin-bottom: 0.7rem; */
-/*   max-width: 40vw; */
-/*   margin-left: 58vw; */
-/*   margin-top: 1.6rem; */
-/*   border-radius: 46px; */
-/*   box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.1); */
-/* } */
-/**/
-/* .logo-wrapper img { */
-/*   max-width: 70px; */
-/*   min-height: 70px; */
-/*   border-radius: 50%; */
-/* } */
-/**/
-/* .link-wrapper { */
-/*   display: flex; */
-/*   gap: 0.4rem; */
-/*   margin-right: 0.7rem; */
-/* } */
-/**/
-/* .link-wrapper li { */
-/*   list-style: none; */
-/* } */
-/**/
-/* .link-wrapper a { */
-/*   transition: all ease 0.3s; */
-/* } */
-/**/
-/* .link-wrapper a:hover { */
-/*   display: block; */
-/*   transform: translateY(-3px); */
-/*   text-decoration: underline; */
-/* } */
+/* floating navbar */
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  max-width: 5rem;
-  min-height: 100vh;
+.nav-wrapper {
   position: fixed;
-  background: var(--nav-bg-clr);
-  backdrop-filter: blur(0.8rem);
-  padding: 2rem 4rem;
-  transition: all ease 0.5s;
-  z-index: 9999;
-}
-
-.nav-text {
-  display: none;
-}
-
-.navbar:hover {
-  max-width: 16rem;
-}
-
-.navbar:hover .nav-text {
-  display: block;
-}
-
-.logo {
-  display: block;
-  font-size: 1.8rem;
-  letter-spacing: 0.3rem;
-  transition: all ease 0.5s;
-  transform: rotate(0deg);
-}
-
-.navbar:hover .logo {
-  transform: rotate(-360deg);
-}
-
-.link-wrapper {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  align-items: center;
-}
-
-.link-wrapper li {
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
+  padding: 3rem;
+  background: linear-gradient(rgba(192, 72, 72, 0.5), rgba(72, 0, 72, 0.5));
+  backdrop-filter: blur(0.3rem);
+  z-index: 9999;
+  clip-path: circle(20px at 50% 45px);
+  transition: all ease 0.5s;
 }
 
-.link-wrapper li a:hover {
-  color: aquamarine;
+.nav-wrapper:hover {
+  clip-path: circle(30%);
 }
 
-main {
-  margin-left: 5rem;
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
 }
+
+.menu li {
+  margin-top: 0.4rem;
+}
+
+.menu li a {
+  color: whitesmoke;
+  font-family: Poppins, 'Sans-serif';
+  font-size: 2.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.menu li a:hover {
+  color: #121212;
+  font-size: 3rem;
+}
+
 
 .mob-navbar {
   display: none;
@@ -147,6 +107,9 @@ main {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  margin-top: 5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
   background: url("./assets/galaxy2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -156,7 +119,7 @@ main {
 
 .contact-wrapper {
   display: flex;
-  margin: 3rem;
+  margin: 1rem;
   padding: 7rem;
   justify-content: space-between;
   align-items: center;
