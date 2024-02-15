@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap');
 
+
 :root {
-  /* --body-bg-clr: radial-gradient(#00002e, #3d005c); */
-  /* --bg-clr: #121212; */
-  --bg-clr: linear-gradient(00deg, #332a45, #0e0e14);
+  --bg-clr: #000000;
   --txt-clr: white;
   --dark-txt-clr: #121212;
   --hover-clr: aquamarine;
   --contrast-clr: #1b1c1c;
-  --card-bg-clr: #2f2e42;
+  --card-bg-clr: #212121;
   --nav-bg-clr: hsla(0, 0%, 0%, 0.5);
 }
+
 
 
 * {
@@ -117,6 +117,7 @@ body::-webkit-scrollbar-track {
   background-repeat: no-repeat;
   min-height: 40vh;
   border-radius: 30px;
+  box-shadow: 0 0 1em hsla(0, 0%, 100%, 0.5);
 }
 
 .contact-wrapper {
@@ -133,15 +134,6 @@ body::-webkit-scrollbar-track {
   background-color: var(--contrast-clr);
   /* animation: slideUp 0.7s ease; */
 }
-
-/* @keyframes slideUp {
-  0% {
-    scale: 0.7; opacity: 0;
-  }
-  100% {
-    scale: 1; opacity: 1;
-  }
-} */
 
 .contact-card:hover {
   background-color: aquamarine;

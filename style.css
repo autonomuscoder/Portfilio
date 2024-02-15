@@ -2,14 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap');
 
 :root {
-  /* --body-bg-clr: radial-gradient(#00002e, #3d005c); */
-  /* --bg-clr: #121212; */
-  --bg-clr: linear-gradient(00deg, #332a45, #0e0e14);
+  --bg-clr: #000000;
   --txt-clr: white;
   --dark-txt-clr: #121212;
   --hover-clr: aquamarine;
   --contrast-clr: #1b1c1c;
-  --card-bg-clr: #2f2e42;
+  --card-bg-clr: #212121;
   --nav-bg-clr: hsla(0, 0%, 0%, 0.5);
 }
 
@@ -73,70 +71,7 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 0 1em #7aa2f7;
 }
 
-
-/*  side navbar
-.navbar {
-  display: flex;
-  justify-content: center;
-  max-width: 5rem;
-  min-height: 100vh;
-  position: fixed;
-  background: var(--nav-bg-clr);
-  backdrop-filter: blur(0.3rem);
-  padding: 2rem 4rem;
-  transition: all ease 0.5s;
-  z-index: 9999;
-}
-
-.nav-text {
-  display: none;
-}
-
-.navbar:hover {
-  max-width: 16rem;
-  background: var(--nav-bg-clr);
-}
-
-.navbar:hover .nav-text {
-  display: block;
-}
-
-.logo {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.3rem;
-  transition: all ease 0.5s;
-  transform: rotate(0deg);
-  background: -webkit-linear-gradient(#bebebe, #161616);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
-}
-
-.navbar:hover .logo {
-  transform: rotate(-360deg);
-}
-
-.link-wrapper {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  align-items: center;
-}
-
-.link-wrapper li {
-  width: 100%;
-}
-
-.link-wrapper li a:hover {
-  color: aquamarine;
-} */
-
 /* floating navbar */
-
 .nav-wrapper {
   position: fixed;
   top: 0;
@@ -144,7 +79,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   padding: 3rem;
-  background: linear-gradient(rgba(192, 72, 72, 0.5), rgba(72, 0, 72, 0.5));
+  background: linear-gradient(rgba(19, 78, 92, 0.5), rgba(113, 178, 128, 0.5));
   backdrop-filter: blur(0.3rem);
   z-index: 9999;
   clip-path: circle(20px at 50% 45px);
@@ -195,10 +130,8 @@ body::-webkit-scrollbar-thumb {
 .img-wrapper img {
   max-width: 18rem;
   min-height: 27rem;
-  margin: 3rem;
-  margin-left: 7rem;
   border-radius: 0.4rem;
-  box-shadow: 0 0 1em 0 hsl(229, 35%, 75%);
+  box-shadow: 0 0 1em 0 hsla(255, 100%, 100%, 0.5);
 }
 
 
@@ -225,12 +158,12 @@ body::-webkit-scrollbar-thumb {
 .planet {
   padding: 1rem;
   margin-top: 3rem;
-  margin-left: 5rem;
+  margin-left: 8rem;
 }
 
 .planet img {
-  min-height: 29rem;
-  margin-left: 2rem;
+  min-height: 20rem;
+  margin-left: 4rem;
   animation: rotation 20s infinite;
 }
 
@@ -242,32 +175,12 @@ body::-webkit-scrollbar-thumb {
 .about {
   display: flex;
   border-radius: 16px;
-  position: relative;
-  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
   padding: 0.6rem;
-  background: url("./assets/geometric.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: 40vh;
   z-index: 1;
-  box-shadow: 0 0 1em 0 hsl(229, 35%, 75%);
-}
-
-.about::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(26, 27, 38, 0.6);
-  backdrop-filter: blur(0.4rem);
-  border-radius: 16px;
-  z-index: 0;
 }
 
 .title {
@@ -370,30 +283,17 @@ body::-webkit-scrollbar-thumb {
       text-align: center;
     }
 
-    .about {
-      padding: 0.2rem;
-      min-height: 34vh;
-      max-width: 60vw;
-      margin-bottom: 0.7rem;
-    }
-
-    .about p {
-      font-size: 0.7rem;
-      text-wrap: wrap;
-    }
-
-  /* .bar-wrapper { */
-  /*   max-width: 100%; */
-  /*   margin: 0 auto; */
-  /*   border-radius: 0; */
-  /* } */
-   
     .logo {
       display: none;
     }
 
     .nav-wrapper {
       display: none;
+    }
+
+    .about img {
+      scale: 1.3;
+      margin: 0 0.5rem;
     }
 
     main {
