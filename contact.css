@@ -1,27 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap");
 
 :root {
-  --bg-clr: #000000;
+  --bg-clr: radial-gradient(
+    ellipse at center,
+    hsla(244, 61%, 10%, 0.9),
+    hsla(0, 0%, 0%, 1)
+  );
   --txt-clr: white;
   --dark-txt-clr: #121212;
   --hover-clr: aquamarine;
   --contrast-clr: #1b1c1c;
-  --card-bg-clr: #212121;
+  --card-bg-clr: hsla(244, 38%, 63%, 0.5);
   --nav-bg-clr: hsla(0, 0%, 0%, 0.5);
 }
-
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-snap-type: y mandatory;
 }
 
 section {
@@ -87,7 +84,7 @@ body::-webkit-scrollbar-track {
 
 .menu li a {
   color: whitesmoke;
-  font-family: Poppins, 'Sans-serif';
+  font-family: Poppins, "Sans-serif";
   font-size: 2.8rem;
   font-weight: 500;
   cursor: pointer;
@@ -98,7 +95,6 @@ body::-webkit-scrollbar-track {
   color: #121212;
   font-size: 3rem;
 }
-
 
 .mob-navbar {
   display: none;
@@ -123,25 +119,27 @@ body::-webkit-scrollbar-track {
 .contact-wrapper {
   display: flex;
   margin: 1rem;
-  padding: 7rem;
-  justify-content: space-between;
+  padding: 3rem;
+  justify-content: center;
   align-items: center;
+  gap: 3rem;
 }
 
 .contact-card {
   padding: 1.3rem;
   border-radius: 20px;
-  background-color: var(--contrast-clr);
-  /* animation: slideUp 0.7s ease; */
+  background-color: var(--card-bg-clr);
+  border: 1px solid #c47e91;
+  transition: all ease 0.3s;
 }
 
 .contact-card:hover {
-  background-color: aquamarine;
+  background-color: #c47e91;
   color: var(--bg-clr);
-  box-shadow: 0 0 1em 0 aquamarine;
+  box-shadow: 0 0 1em 0 #c47e91;
 }
 
-.contact-card:hover.contact-card a{
+.contact-card:hover.contact-card a {
   color: var(--bg-clr);
   text-decoration: underline;
 }
@@ -150,7 +148,8 @@ body::-webkit-scrollbar-track {
   margin-left: 1rem;
   padding: 1.3rem;
   border-radius: 20px;
-  background-color: var(--contrast-clr);
+  border: #c47e91;
+  background-color: var(--card-bg-clr);
   margin-left: 2rem;
   animation: slideUp 0.7s ease;
 }
@@ -173,59 +172,58 @@ body::-webkit-scrollbar-track {
     max-width: 100vw;
   }
 
- .mob-navbar {
-      padding: 1rem;
-      display: flex;
-      background: var(--contrast-clr);
-      /* width: 40vw; */
-      width: 100vw;
-      justify-content: space-around;
-      margin-bottom: 2rem;
-    }
+  .mob-navbar {
+    padding: 1rem;
+    display: flex;
+    background: var(--nav-bg-clr);
+    border-radius: 30px;
+    margin: 1.2rem auto;
+    width: 100vw;
+    justify-content: space-around;
+  }
 
-    .mob-link-wrapper {
-      display: flex;
-      list-style: none;
-      align-items: center;
-      gap: 1rem;
-    }
+  .mob-link-wrapper {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+  }
 
-    .mob-logo {
-      font-size: 1.4rem;
-    }
+  .mob-logo {
+    font-size: 1.4rem;
+  }
 
-    .logo {
-      display: none;
-    }
+  .logo {
+    display: none;
+  }
 
-    .nav-wrapper {
-      display: none;
-    }
+  .nav-wrapper {
+    display: none;
+  }
 
-    main {
-      margin: 0 0;
-    }
+  main {
+    margin: 0 0;
+  }
 
+  .contact-card {
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: 0 0 1em 0 #c47e91;
+  }
 
-    .contact-card {
-      max-width: 100vw;
-      border-radius: 0;
-      box-shadow:  0 0 1em 0 aquamarine;
-    }
+  .email {
+    background: none;
+    text-wrap: nowrap;
+  }
 
-    .email {
-      background: none;
-      text-wrap: nowrap;
-    }
-
-    html {
-      scroll-snap-type: none;
-    }
+  html {
+    scroll-snap-type: none;
+  }
   section {
     height: 50vh;
   }
 
-    section:nth-child(3) {
-      margin-bottom: 0rem;
-    }
+  section:nth-child(3) {
+    margin-bottom: 0rem;
+  }
 }

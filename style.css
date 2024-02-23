@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap");
 
 :root {
-  --bg-clr: #000000;
+  --bg-clr: radial-gradient(
+    ellipse at center,
+    hsla(244, 61%, 10%, 0.9),
+    hsla(0, 0%, 0%, 1)
+  );
   --txt-clr: white;
   --dark-txt-clr: #121212;
   --hover-clr: aquamarine;
   --contrast-clr: #1b1c1c;
-  --card-bg-clr: #212121;
+  --card-bg-clr: hsla(244, 38%, 63%, 0.5);
   --nav-bg-clr: hsla(0, 0%, 0%, 0.5);
-}
-
-html {
-  scroll-snap-type: y proximity;
+  --grad-txt: linear-gradient(90deg, #7b3e59, #553976);
 }
 
 section {
   height: 100vh;
   padding: 3rem;
   margin: 2rem 2rem;
-  scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,9 @@ section:nth-child(3) {
   margin-bottom: 4rem;
 }
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -48,12 +50,38 @@ img {
 body {
   height: 100vh;
   max-width: 100%;
+  line-height: 1.5;
   background: var(--bg-clr);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  backdrop-filter: blur(20px);
   color: var(--txt-clr);
-  font-family: Manrope, 'sans-serif';
+  font-family: Manrope, "sans-serif";
   overflow-x: hidden;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
 }
 
 /* scrollbar (doesn't work on firefox)*/
@@ -105,7 +133,7 @@ body::-webkit-scrollbar-thumb {
 
 .menu li a {
   color: whitesmoke;
-  font-family: Poppins, 'Sans-serif';
+  font-family: Poppins, "Sans-serif";
   font-size: 2.8rem;
   font-weight: 500;
   cursor: pointer;
@@ -131,9 +159,8 @@ body::-webkit-scrollbar-thumb {
   max-width: 18rem;
   min-height: 27rem;
   border-radius: 0.4rem;
-  box-shadow: 0 0 1em 0 hsla(255, 100%, 100%, 0.5);
+  /* box-shadow: 0 0 1em 0 hsla(255, 100%, 100%, 0.5); */
 }
-
 
 .message-wrapper {
   display: flex;
@@ -149,6 +176,13 @@ body::-webkit-scrollbar-thumb {
 .message-wrapper h2 {
   line-height: 3.2rem;
   font-size: 2.8rem;
+}
+
+.txt-gradient {
+  background: linear-gradient(90deg, #7b3e59, #553976);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .message-wrapper p {
@@ -168,8 +202,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 @keyframes rotation {
-0% { transform: rotate(0deg) }
-100% { transform: rotate(360deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #mob-about {
@@ -208,6 +246,8 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 5rem;
+  margin: 3rem auto;
 }
 
 .card {
@@ -218,21 +258,18 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   background: var(--card-bg-clr);
+  backdrop-filter: blur(0.3rem);
+  border: 1px solid #c47e91;
   min-height: 9rem;
   max-width: 12rem;
-  margin: 1.5rem 4.3rem;
   border-radius: 15px;
   transition: all ease 0.3s;
 }
 
-.card:nth-child(4) {
-  margin-bottom: auto;
-}
-
 .card:hover {
-  background: aquamarine;
+  background: #c47e91;
   color: var(--dark-txt-clr);
-  box-shadow: 0 0 1rem aquamarine;
+  box-shadow: 0 0 1rem #c47e91;
 }
 
 .card-img {
@@ -250,7 +287,7 @@ body::-webkit-scrollbar-thumb {
   .mob-navbar {
     padding: 1rem;
     display: flex;
-    background: var(--contrast-clr);
+    background: var(--nav-bg-clr);
     border-radius: 30px;
     margin: 1.2rem auto;
     width: 100vw;
@@ -266,6 +303,10 @@ body::-webkit-scrollbar-thumb {
 
   .mob-logo {
     font-size: 1.4rem;
+    background: var(--grad-txt);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .hero-wrapper {
@@ -314,9 +355,5 @@ body::-webkit-scrollbar-thumb {
 
   main {
     margin: 0 0;
-  }
-
-  html {
-    scroll-snap-type: none;
   }
 }
