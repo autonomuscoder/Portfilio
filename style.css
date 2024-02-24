@@ -99,6 +99,16 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 0 1em #7aa2f7;
 }
 
+/* Preloader */
+.loader {
+  background: #000 url("./assets/loader.gif") no-repeat center center;
+  background-size: 40%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+}
+
 /* floating navbar */
 .nav-wrapper {
   position: fixed;
@@ -230,6 +240,11 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
 }
 
+.titile p {
+  margin: 0.7rem auto;
+  font-size: 0.2rem;
+}
+
 .about p {
   z-index: inherit;
 }
@@ -261,6 +276,7 @@ body::-webkit-scrollbar-thumb {
   min-height: 11rem;
   aspect-ratio: 1 / 1.3;
   max-width: 12rem;
+  background: #121212;
   border-radius: 15px;
   transition: all ease 0.3s;
 }
@@ -290,12 +306,12 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   background: conic-gradient(
     from var(--gradient-angle),
-    rgba(218, 68, 83, 0.5),
-    rgba(137, 33, 107, 0.5),
-    rgba(137, 33, 107, 0.5),
-    rgba(218, 68, 83, 0.5)
+    #8360c3,
+    #2ebf91,
+    #2ebf91,
+    #8360c3
   );
-  animation: grad-rotate 10s linear infinite;
+  animation: grad-rotate 3s linear infinite;
   border-radius: inherit;
   inset: -0.3rem;
   z-index: -1;

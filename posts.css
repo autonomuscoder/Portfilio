@@ -69,6 +69,16 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 0 1em #7aa2f7;
 }
 
+/* Preloader */
+.loader {
+  background: #000 url("./assets/loader.gif") no-repeat center center;
+  background-size: 40%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+}
+
 /* floating navbar */
 
 .nav-wrapper {
@@ -194,4 +204,3 @@ body::-webkit-scrollbar-thumb {
     margin: 0 0;
   }
 }
-

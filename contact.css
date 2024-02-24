@@ -50,6 +50,16 @@ body::-webkit-scrollbar-track {
   background: var(--contrast-clr);
 }
 
+/* Preloader */
+.loader {
+  background: #000 url("./assets/loader.gif") no-repeat center center;
+  background-size: 40%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+}
+
 /* floating navbar */
 
 .nav-wrapper {
