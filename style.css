@@ -105,6 +105,7 @@ body::-webkit-scrollbar-thumb {
   background-size: 40%;
   height: 100vh;
   width: 100%;
+  inset: 0;
   position: fixed;
   z-index: 99999;
 }
@@ -311,7 +312,7 @@ body::-webkit-scrollbar-thumb {
     #2ebf91,
     #8360c3
   );
-  animation: grad-rotate 3s linear infinite;
+  animation: grad-rotate 5s linear infinite;
   border-radius: inherit;
   inset: -0.3rem;
   z-index: -1;
