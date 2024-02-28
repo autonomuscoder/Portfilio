@@ -1,10 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap);
+a,
+body {
+  color: var(--txt-clr);
+}
+.loader,
+body,
+section {
+  height: 100vh;
+}
+.loader,
+.nav-wrapper {
+  position: fixed;
+  width: 100%;
+}
 
+/* hsla(244, 61%, 10%, 0.9), */
 :root {
   --bg-clr: radial-gradient(
     ellipse at center,
-    hsla(244, 61%, 10%, 0.9),
+    hsla(0, 0%, 14%, 1),
     hsla(0, 0%, 0%, 1)
   );
   --txt-clr: white;
@@ -15,20 +30,16 @@
   --nav-bg-clr: hsla(0, 0%, 0%, 0.5);
   --grad-txt: linear-gradient(90deg, #7b3e59, #553976);
 }
-
 section {
   height: 100vh;
   padding: 3rem;
-  margin: 2rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 section:nth-child(3) {
   margin-bottom: 4rem;
 }
-
 *,
 ::after,
 ::before {
@@ -36,30 +47,23 @@ section:nth-child(3) {
   padding: 0;
   box-sizing: border-box;
 }
-
 a {
   text-decoration: none;
-  color: var(--txt-clr);
 }
-
 img {
   display: block;
   width: 100%;
 }
-
 body {
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100%;
   line-height: 1.5;
   background: var(--bg-clr);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  backdrop-filter: blur(20px);
-  color: var(--txt-clr);
   font-family: Manrope, "sans-serif";
   overflow-x: hidden;
 }
-
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -70,10 +74,8 @@ body {
   h3 {
     font-size: 1.75rem;
   }
+  body,
   h4 {
-    font-size: 1rem;
-  }
-  body {
     font-size: 1rem;
   }
   h1,
@@ -83,45 +85,28 @@ body {
     line-height: 1;
   }
 }
-
-/* scrollbar (doesn't work on firefox)*/
 body::-webkit-scrollbar {
   width: 1rem;
 }
-
 body::-webkit-scrollbar-track {
   background: #1e1e26;
 }
-
 body::-webkit-scrollbar-thumb {
   background: #7aa2f7;
   border-radius: 100vw;
   box-shadow: 0 0 1em #7aa2f7;
 }
-
-/* Preloader */
 .loader {
-  background: #000 url("./assets/loader.gif") no-repeat center center;
-  background-size: 40%;
-  height: 100vh;
-  width: 100%;
+  background:
+    url("../assets/loader.gif") center center/40% no-repeat,
+    #000;
   inset: 0;
-  position: fixed;
-  z-index: 99999;
+  z-index: 9999;
 }
-
-.nav-placeholder {
-  text-align: center;
-  margin-top: 4rem;
-}
-
-/* floating navbar */
 .nav-wrapper {
-  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
   padding: 3rem;
   background: linear-gradient(
     rgba(253, 239, 249, 0.5),
@@ -130,26 +115,24 @@ body::-webkit-scrollbar-thumb {
     rgba(3, 0, 30, 0.5)
   );
   backdrop-filter: blur(0.3rem);
-  z-index: 9999;
+  z-index: 999;
   clip-path: circle(25px at 50% 45px);
-  transition: all ease 0.5s;
-  animation: expand 1s ease infinite alternate;
+  transition: 0.5s;
+  animation: 1s infinite alternate expand;
+  will-change: clip-path;
 }
-
 @keyframes expand {
   from {
     transform: scale(1);
   }
   to {
-    transform: scale(1.1); /* Adjust for desired scale */
+    transform: scale(0.9);
   }
 }
-
 .nav-wrapper:hover {
   clip-path: circle(30%);
   animation: none;
 }
-
 .menu {
   position: absolute;
   top: 50%;
@@ -158,42 +141,34 @@ body::-webkit-scrollbar-thumb {
   list-style: none;
   text-align: center;
 }
-
 .menu li {
   margin-top: 0.4rem;
 }
-
 .menu li a {
-  color: whitesmoke;
-  font-family: Poppins, "Sans-serif";
+  color: #f5f5f5;
+  font-family: Poppins, Sans-serif;
   font-size: 2.8rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all ease 0.3s;
+  transition: 0.3s;
 }
-
 .menu li a:hover {
   color: #121212;
   font-size: 3rem;
 }
-
+#mob-about,
 .mob-navbar {
   display: none;
 }
-
 .hero-wrapper {
   display: flex;
-  min-height: 80vh;
   max-width: 100%;
 }
-
 .img-wrapper img {
   max-width: 18rem;
   min-height: 27rem;
   border-radius: 0.4rem;
-  /* box-shadow: 0 0 1em 0 hsla(255, 100%, 100%, 0.5); */
 }
-
 .message-wrapper {
   display: flex;
   flex-direction: column;
@@ -204,57 +179,44 @@ body::-webkit-scrollbar-thumb {
   max-width: 9rem;
   text-wrap: nowrap;
 }
-
+.about,
+.card,
+.skill-wrapper {
+  text-align: center;
+}
 .message-wrapper h2 {
   line-height: 3.2rem;
   font-size: 2.8rem;
 }
-
 .txt-gradient {
   background: linear-gradient(90deg, #7b3e59, #553976);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .message-wrapper p {
   font-size: 1rem;
 }
-
 .planet {
   padding: 1rem;
   margin-top: 3rem;
   margin-left: 8rem;
 }
-
-/* .planet img { */
-/*   min-height: 20rem; */
-/*   margin-left: 4rem; */
-/*   animation: rotation 20s infinite; */
-/* } */
-
 .planet-ifr {
   min-height: 20rem;
   border: none;
 }
-
 @keyframes rotation {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
   }
 }
-
-#mob-about {
-  display: none;
-}
-
 .about {
   display: flex;
   border-radius: 16px;
-  text-align: center;
   align-items: center;
   justify-content: center;
   padding: 0.6rem;
@@ -262,26 +224,24 @@ body::-webkit-scrollbar-thumb {
   z-index: 1;
 }
 
+.about img {
+  max-width: 80vw;
+}
 .title {
   margin-bottom: 0.5rem;
   z-index: 2;
 }
-
 .titile p {
   margin: 0.7rem auto;
   font-size: 0.2rem;
 }
-
 .about p {
   z-index: inherit;
 }
-
 .skill-wrapper {
-  text-align: center;
   margin-top: 8rem;
   min-height: 100vh;
 }
-
 .card-wrapper {
   display: flex;
   flex-direction: row;
@@ -291,33 +251,28 @@ body::-webkit-scrollbar-thumb {
   gap: 5rem;
   margin: 3rem auto;
 }
-
 .card {
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
-  text-align: center;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 11rem;
-  aspect-ratio: 1 / 1.3;
+  aspect-ratio: 1/1.3;
   max-width: 12rem;
   background: #121212;
   border-radius: 15px;
-  transition: all ease 0.3s;
+  transition: 0.3s;
 }
-
 .card:hover {
   scale: 1.1;
 }
-
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
-
 @keyframes grad-rotate {
   0% {
     --gradient-angle: 0deg;
@@ -326,9 +281,8 @@ body::-webkit-scrollbar-thumb {
     --gradient-angle: 360deg;
   }
 }
-
-.card::before,
-.card::after {
+.card::after,
+.card::before {
   content: "";
   position: absolute;
   background: conic-gradient(
@@ -338,27 +292,23 @@ body::-webkit-scrollbar-thumb {
     #2ebf91,
     #8360c3
   );
-  animation: grad-rotate 5s linear infinite;
+  animation: 5s linear infinite grad-rotate;
   border-radius: inherit;
   inset: -0.3rem;
   z-index: -1;
 }
-
 .card::after {
   filter: blur(3.5rem);
 }
-
 .card-img {
   max-width: 4rem;
   min-height: 4rem;
 }
-
 @media only screen and (max-width: 1200px) {
   .planet {
     display: none;
   }
 }
-
 @media only screen and (max-width: 600px) {
   section {
     height: auto;
@@ -374,14 +324,12 @@ body::-webkit-scrollbar-thumb {
     width: 100vw;
     justify-content: space-around;
   }
-
   .mob-link-wrapper {
     display: flex;
     list-style: none;
     align-items: center;
     gap: 1rem;
   }
-
   .mob-logo {
     font-size: 1.4rem;
     background: var(--grad-txt);
@@ -389,44 +337,33 @@ body::-webkit-scrollbar-thumb {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   .hero-wrapper {
     flex-direction: column;
     margin-top: 10rem;
     text-align: center;
   }
-
   .img-wrapper {
     margin: 1rem auto;
   }
-
   .img-wrapper img {
-    margin: 0 auto;
-    margin-top: -8rem;
+    margin: -8rem auto 0;
   }
-
   .message-wrapper {
     margin: 0 auto;
     text-wrap: wrap;
     text-align: center;
   }
-
   .skill-wrapper {
     margin-top: 2rem;
   }
-
+  .about img,
+  .nav-placeholder,
   .nav-wrapper {
     display: none;
   }
-
   .about {
     margin-bottom: 5rem;
   }
-
-  .about img {
-    display: none;
-  }
-
   #mob-about {
     display: flex;
     flex-direction: column;
@@ -434,15 +371,10 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     gap: 2rem;
   }
-
   #mob-about > h2 {
     color: #9ece6a;
   }
-
   main {
-    margin: 0 0;
-  }
-  .nav-placeholder {
-    display: none;
+    margin: 0;
   }
 }
