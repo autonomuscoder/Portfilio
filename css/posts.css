@@ -56,10 +56,15 @@ img {
 body {
   min-height: 100vh;
   max-width: 100%;
-  background: var(--bg-clr);
+  background: url("../assets/bg6.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
+  font-family: Manrope, "sans-serif";
+}
+main {
+  backdrop-filter: blur(0.3rem);
 }
 body::-webkit-scrollbar {
   width: 1rem;
@@ -83,12 +88,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   height: 100%;
   padding: 3rem;
-  background: linear-gradient(
-    rgba(253, 239, 249, 0.5),
-    rgba(236, 56, 188, 0.5),
-    rgba(115, 3, 192, 0.5),
-    rgba(3, 0, 30, 0.5)
-  );
+  background: linear-gradient(rgba(153, 242, 200, 0.5), rgba(31, 64, 55, 0.5));
   backdrop-filter: blur(0.3rem);
   z-index: 9999;
   clip-path: circle(25px at 50% 45px);

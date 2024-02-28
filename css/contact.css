@@ -50,9 +50,10 @@ a {
 }
 body {
   min-height: 100vh;
-  background: var(--bg-clr);
+  background: url("../assets/bg6.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   font-family: Manrope, "sans-serif";
 }
 body::-webkit-scrollbar {
@@ -67,17 +68,15 @@ body::-webkit-scrollbar-track {
   inset: 0;
   z-index: 99999;
 }
+main {
+  backdrop-filter: blur(0.3rem);
+}
 .nav-wrapper {
   top: 0;
   left: 0;
   height: 100%;
   padding: 3rem;
-  background: linear-gradient(
-    rgba(253, 239, 249, 0.5),
-    rgba(236, 56, 188, 0.5),
-    rgba(115, 3, 192, 0.5),
-    rgba(3, 0, 30, 0.5)
-  );
+  background: linear-gradient(rgba(153, 242, 200, 0.5), rgba(31, 64, 55, 0.5));
   backdrop-filter: blur(0.3rem);
   z-index: 9999;
   clip-path: circle(20px at 50% 45px);
@@ -127,13 +126,11 @@ body::-webkit-scrollbar-track {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-right: 2rem;
   margin-left: 2rem;
-  background: url("../assets/galaxy2.jpg") 0 0 / cover no-repeat;
   min-height: 40vh;
   border-radius: 30px;
-  box-shadow: 0 0 1em hsla(0, 0%, 100%, 0.5);
 }
 .pulse-wrapper {
   display: flex;
@@ -154,10 +151,10 @@ body::-webkit-scrollbar-track {
 }
 .pulse::before {
   z-index: 10;
-  background: green;
+  background: #9ece6a;
 }
 .pulse::after {
-  background: green;
+  background: #9ece6a;
   z-index: 1;
   animation: 1s infinite pulse;
 }
@@ -173,7 +170,7 @@ body::-webkit-scrollbar-track {
 }
 .card-wrapper {
   display: flex;
-  margin: 1rem;
+  margin: 3rem;
   padding: 3rem;
   justify-content: center;
   align-items: center;
