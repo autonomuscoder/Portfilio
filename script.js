@@ -30,7 +30,19 @@ gsap.to(".email", {
 });
 gsap.from(".title-wrapper", { duration: 1, y: "-100%", ease: "bounce" });
 
-var loader = document.querySelector(".loader");
+const loader = document.querySelector(".loader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
+});
+
+const navBtn = document.querySelector(".nav-btn");
+const closeBtn = document.querySelector(".close-btn");
+const sideBar = document.querySelector(".side-nav");
+
+navBtn.addEventListener("click", () => {
+  sideBar.classList.toggle("reveal");
+});
+
+closeBtn.addEventListener("click", () => {
+  sideBar.classList.remove("reveal");
 });

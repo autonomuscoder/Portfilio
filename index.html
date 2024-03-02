@@ -5,27 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./css/style.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="loader"></div>
-    <nav class="mob-navbar">
-      <ul class="mob-link-wrapper">
-        <li class="mob-logo">ABIR</li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="posts.html">Posts</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- floating nav -->
-    <div class="nav-wrapper">
+    <button type="button" class="nav-btn">
+      <i class="bx bx-menu-alt-right" style="color: #efeaea"></i>
+    </button>
+    <aside class="side-nav">
+      <div class="nav-header">
+        <h2 class="txt-gradient">ABIR</h2>
+        <button type="button" class="close-btn"><i class="bx bx-x"></i></button>
+      </div>
       <ul class="menu">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./posts.html">Posts</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
-    </div>
+    </aside>
 
     <main>
       <!-- hero-section -->
