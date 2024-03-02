@@ -178,6 +178,7 @@ iframe {
   padding: 0.4rem;
   grid-column: 2/2;
   grid-row: 1/1;
+  margin: auto;
 }
 .text-wrapper {
   display: inline-block;
@@ -192,6 +193,7 @@ iframe {
   animation:
     0.5s step-end infinite alternate blink,
     2s steps(32) typewriter;
+  margin: auto;
 }
 .typewritter a {
   color: #7aa2f7;
@@ -222,6 +224,7 @@ iframe {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
   padding: 3rem;
+  margin: 3rem;
   gap: 1.8rem;
 }
 .post-card1,
@@ -231,6 +234,7 @@ iframe {
   grid-column: 2;
   padding: 1.3rem;
   line-height: 1.3rem;
+  will-change: transform;
 }
 .post-card1 {
   grid-row: 2;
@@ -327,5 +331,8 @@ iframe {
   }
   main {
     margin: 0;
+  }
+  .typewritter {
+    font-size: 0.9rem;
   }
 }

@@ -28,7 +28,31 @@ gsap.to(".email", {
   scale: "1",
   ease: "circ-out",
 });
-gsap.from(".title-wrapper", { duration: 1, y: "-100%", ease: "bounce" });
+gsap.from(".title-wrapper", { duration: 1, y: "-100%", ease: "circ-out" });
+gsap.from(".post-card1", {
+  scrollTrigger: ".post-card1",
+  duration: 1,
+  scale: "0.5",
+  ease: "circ-out",
+});
+gsap.from(".post-card2", {
+  scrollTrigger: ".post-card2",
+  duration: 1,
+  scale: "0.5",
+  ease: "circ-out",
+});
+gsap.from(".post-card3", {
+  scrollTrigger: ".post-card3",
+  duration: 1,
+  scale: "0.5",
+  ease: "circ-out",
+});
+gsap.from(".post-card4", {
+  scrollTrigger: ".post-card4",
+  duration: 1,
+  scale: "0.5",
+  ease: "circ-out",
+});
 
 const loader = document.querySelector(".loader");
 window.addEventListener("load", function () {

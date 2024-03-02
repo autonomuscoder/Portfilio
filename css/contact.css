@@ -156,8 +156,14 @@ main {
 .reveal {
   transform: translateX(0%);
 }
+.galaxy {
+  width: 100%;
+  height: 40vh;
+  border: none;
+}
 .title-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
