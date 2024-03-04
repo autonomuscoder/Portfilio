@@ -180,6 +180,12 @@ body::-webkit-scrollbar-thumb {
 .reveal {
   transform: translateX(0%);
 }
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* Set behind content */
+}
+/* Style your section element */
 .hero-wrapper {
   display: flex;
   max-width: 100%;
