@@ -173,6 +173,11 @@ iframe {
   max-width: 40vw;
   border: none;
 }
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* Set behind content */
+}
 .heading-wrapper {
   text-align: center;
   padding: 0.4rem;

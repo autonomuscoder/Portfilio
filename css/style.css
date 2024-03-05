@@ -67,6 +67,7 @@ body {
 }
 main {
   backdrop-filter: blur(0.3rem);
+  padding: 0.3rem;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -172,6 +173,18 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   padding: 0.3rem;
 }
+.hire-btn {
+  background: transparent;
+  border: 1px solid #7dcfff;
+  padding: 0.325rem;
+  margin: 0.8rem 0.2rem;
+  scale: 1.1;
+  transition: all ease 0.3s;
+}
+.hire-btn:hover {
+  background: #7dcfff;
+  box-shadow: 0 0 1em #7dcfff;
+}
 @media screen and (min-width: 676px) {
   .side-nav {
     width: 400px;
@@ -189,8 +202,9 @@ body::-webkit-scrollbar-thumb {
 .hero-wrapper {
   display: flex;
   max-width: 100%;
+  justify-content: space-between;
 }
-.img-wrapper img {
+#hero-img {
   max-width: 18rem;
   min-height: 27rem;
   border-radius: 0.4rem;
@@ -248,6 +262,12 @@ body::-webkit-scrollbar-thumb {
 .about-title {
   border-right: 1px solid #7dcfff;
 }
+.about-title h2 {
+  background: linear-gradient(90deg, #2980b9, #6dd5fa, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .about-title p {
   margin: 0.7rem auto;
 }
@@ -257,6 +277,10 @@ body::-webkit-scrollbar-thumb {
 .title {
   margin-bottom: 0.5rem;
   z-index: 2;
+  background: linear-gradient(90deg, #2980b9, #6dd5fa, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .title p {
   margin: 0.7rem auto;
@@ -313,15 +337,15 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   background: conic-gradient(
     from var(--gradient-angle),
-    #8360c3,
-    #2ebf91,
-    #2ebf91,
-    #8360c3
+    #aa4b6b,
+    #6b6b83,
+    #3b8d99
   );
-  animation: 5s linear infinite grad-rotate;
+  animation: 8s linear infinite grad-rotate;
   border-radius: inherit;
   inset: -0.3rem;
   z-index: -1;
+  opacity: 0.5;
 }
 .card::after {
   filter: blur(3.5rem);
@@ -379,6 +403,8 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 2rem;
     border-right: none;
     border-bottom: 1px solid #7dcfff;
+  }
+  .about-title h2 {
   }
   .about-title p {
     font-family: Inter, "sans-serif";
