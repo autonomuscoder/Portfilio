@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 a,
 body {
   color: var(--txt-clr);
@@ -58,15 +58,14 @@ body {
   min-height: 100vh;
   max-width: 100%;
   line-height: 1.5;
-  background: url("../assets/bg6.jpg");
+  background: url("../assets/bg7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: Manrope, "sans-serif";
+  font-family: "Space Mono", "sans-serif";
   overflow-x: hidden;
 }
 main {
-  backdrop-filter: blur(0.3rem);
   padding: 0.3rem;
 }
 @media screen and (min-width: 800px) {
@@ -121,6 +120,15 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   z-index: 999;
 }
+.nav-btn:hover {
+  transform: rotate(360deg);
+}
+.menu-span {
+  color: white;
+  font-size: 1.9rem;
+  display: flex;
+  align-items: center;
+}
 .side-nav {
   position: fixed;
   top: 0;
@@ -130,7 +138,7 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   transform: translateX(100%);
   z-index: 999;
@@ -163,7 +171,7 @@ body::-webkit-scrollbar-thumb {
   text-transform: capitalize;
   font-family: Inter, "sans-serif";
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 500;
   border-bottom: 1px solid rgba(203, 216, 245, 0.2);
   transition: padding ease 0.3s;
 }
@@ -214,10 +222,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 1.6rem;
   margin-top: 9rem;
   margin-left: 5rem;
-  max-width: 9rem;
   text-wrap: nowrap;
 }
 .about,
@@ -230,6 +236,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 2.8rem;
 }
 .txt-gradient {
+  font-family: "Inter", "sans-serif";
   background: linear-gradient(90deg, #7b3e59, #553976);
   -webkit-background-clip: text;
   background-clip: text;
@@ -246,14 +253,6 @@ body::-webkit-scrollbar-thumb {
 .planet-ifr {
   min-height: 20rem;
   border: none;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 .about {
   padding: 0.6rem;

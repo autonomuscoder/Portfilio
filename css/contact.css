@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,500;0,900&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 a,
 body {
   color: var(--txt-clr);
 }
 .txt-gradient {
+  font-family: "Inter", "sans-serif";
   background: linear-gradient(90deg, #7b3e59, #553976);
   -webkit-background-clip: text;
   background-clip: text;
@@ -57,11 +57,11 @@ a {
 }
 body {
   min-height: 100vh;
-  background: url("../assets/bg6.jpg");
+  background: url("../assets/bg7.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  font-family: Manrope, "sans-serif";
+  font-family: "Space Mono", "sans-serif";
 }
 body::-webkit-scrollbar {
   width: 1rem;
@@ -74,9 +74,6 @@ body::-webkit-scrollbar-track {
   height: 100vh;
   inset: 0;
   z-index: 99999;
-}
-main {
-  backdrop-filter: blur(0.3rem);
 }
 .nav-btn {
   position: fixed;
@@ -91,6 +88,15 @@ main {
   cursor: pointer;
   z-index: 999;
 }
+.nav-btn:hover {
+  transform: rotate(360deg);
+}
+.menu-span {
+  color: white;
+  font-size: 1.9rem;
+  display: flex;
+  align-items: center;
+}
 .side-nav {
   position: fixed;
   top: 0;
@@ -100,7 +106,7 @@ main {
   display: grid;
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   transform: translateX(100%);
   z-index: 999;
@@ -137,7 +143,7 @@ main {
   text-transform: capitalize;
   font-family: Inter, "sans-serif";
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 500;
   border-bottom: 1px solid rgba(203, 216, 245, 0.2);
   margin-bottom: 0.2rem;
   transition: padding ease 0.3s;
@@ -155,6 +161,18 @@ main {
 }
 .reveal {
   transform: translateX(0%);
+}
+.hire-btn {
+  background: transparent;
+  border: 1px solid #7dcfff;
+  padding: 0.325rem;
+  margin: 0.8rem 0.2rem;
+  scale: 1.1;
+  transition: all ease 0.3s;
+}
+.hire-btn:hover {
+  background: #7dcfff;
+  box-shadow: 0 0 1em #7dcfff;
 }
 .galaxy {
   width: 100%;
