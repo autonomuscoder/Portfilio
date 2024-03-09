@@ -119,6 +119,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
   cursor: pointer;
   z-index: 999;
+  transition: transform ease 0.5s;
 }
 .nav-btn:hover {
   transform: rotate(360deg);
