@@ -202,7 +202,7 @@ iframe {
   padding: 0.4rem;
   grid-column: 2/2;
   grid-row: 1/1;
-  margin: auto;
+  margin-inline: auto;
 }
 .text-wrapper {
   display: inline-block;
@@ -248,7 +248,7 @@ iframe {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
   padding: 3rem;
-  margin: 3rem;
+  margin-inline: auto;
   gap: 1.8rem;
 }
 .post-card1,
@@ -320,43 +320,15 @@ iframe {
   box-shadow: 0 0 1em #7aa2f7;
 }
 @media only screen and (max-width: 600px) {
-  .hero-wrapper {
-    flex-direction: column;
-    margin-top: 10rem;
-    text-align: center;
-  }
-  .img-wrapper {
-    margin: 1rem auto;
-  }
-  .img-wrapper img {
-    margin: 0 auto;
-  }
-  .message-wrapper {
-    margin: 0 auto;
-    text-wrap: wrap;
-    text-align: center;
-  }
-  .about img,
-  .nav-wrapper {
-    display: none;
-  }
-  .about {
-    margin-bottom: 5rem;
-  }
-  #mob-about {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  #mob-about > h2 {
-    color: #9ece6a;
-  }
   main {
-    margin: 0;
+    margin-inline: auto;
   }
   .typewritter {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+  }
+  .blog {
+    img {
+      scale: 0.9;
+    }
   }
 }
