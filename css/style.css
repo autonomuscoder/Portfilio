@@ -261,12 +261,7 @@ body::-webkit-scrollbar-thumb {
 }
 .about-title {
   border-right: 1px solid #7dcfff;
-}
-.about-title h2 {
-  background: linear-gradient(90deg, #2980b9, #6dd5fa, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+	padding-right: 0.5rem;
 }
 .about-title p {
   margin: 0.7rem auto;
@@ -276,11 +271,9 @@ body::-webkit-scrollbar-thumb {
 }
 .title {
   margin-bottom: 0.5rem;
-  z-index: 2;
-  background: linear-gradient(90deg, #2980b9, #6dd5fa, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+	border-bottom: 1px solid #7dcfff;
+	display: inline-block;
+	padding-bottom: 0.5rem;
 }
 .title p {
   margin: 0.7rem auto;
@@ -337,9 +330,10 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   background: conic-gradient(
     from var(--gradient-angle),
-    #aa4b6b,
-    #6b6b83,
-    #3b8d99
+    #ad5389,
+    #3c1053,
+    #3c1053,
+    #ad5389
   );
   animation: 8s linear infinite grad-rotate;
   border-radius: inherit;
@@ -403,8 +397,6 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 2rem;
     border-right: none;
     border-bottom: 1px solid #7dcfff;
-  }
-  .about-title h2 {
   }
   .about-title p {
     font-family: Inter, "sans-serif";

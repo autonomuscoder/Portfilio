@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="loader"></div>
 
@@ -38,6 +39,16 @@
     </aside>
 
     <main>
+      <audio autoplay loop>
+        <source src="./assets/bg.mp3" type="audio/mp3" />
+      </audio>
+      <iframe
+        src="assets/bg.mp3"
+        allow="autoplay"
+        style="display: none"
+        id="iframeAudio"
+      >
+      </iframe>
       <div id="particles-js"></div>
       <section class="blog">
         <div class="heading-wrapper">
