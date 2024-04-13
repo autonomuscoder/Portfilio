@@ -1,114 +1,143 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/posts.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-	<title></title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="./css/posts.css" rel="stylesheet" />
-	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+  <body>
+    <div class="loader"></div>
 
-<body>
-	<div class="loader"></div>
+    <button type="button" class="nav-btn">
+      <span class="menu-span"
+        >M<i class="bx bx-menu" style="color: #efeaea"></i>NU</span
+      >
+    </button>
+    <aside class="side-nav">
+      <div class="nav-header">
+        <h2 class="txt-gradient">ABIR</h2>
+        <button type="button" class="close-btn"><i class="bx bx-x"></i></button>
+      </div>
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./posts.html">Posts</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <button class="hire-btn" type="button">
+          <a
+            href="https://www.fiverr.com/mahi_abir/convert-figma-designs-into-wordpress-sites"
+            target="_blank"
+            >Hire Me</a
+          >
+        </button>
+      </ul>
+    </aside>
 
-	<button type="button" class="nav-btn">
-		<span class="menu-span">M<i class="bx bx-menu" style="color: #efeaea"></i>NU</span>
-	</button>
-	<aside class="side-nav">
-		<div class="nav-header">
-			<h2 class="txt-gradient">ABIR</h2>
-			<button type="button" class="close-btn"><i class="bx bx-x"></i></button>
-		</div>
-		<ul class="menu">
-			<li><a href="./index.html">Home</a></li>
-			<li><a href="./posts.html">Posts</a></li>
-			<li><a href="./contact.html">Contact</a></li>
-			<button class="hire-btn" type="button">
-				<a href="https://www.fiverr.com/mahi_abir/convert-figma-designs-into-wordpress-sites" target="_blank">Hire
-					Me</a>
-			</button>
-		</ul>
-	</aside>
+    <main>
+      <iframe
+        src="assets/bg.mp3"
+        allow="autoplay"
+        style="display: none"
+        id="iframeAudio"
+      >
+      </iframe>
+      <div id="particles-js"></div>
+      <section class="blog">
+        <div class="heading-wrapper">
+          <iframe
+            src="https://lottie.host/embed/323a9ca6-26ed-454f-a550-9731f5ddc85e/mqd6KkjrdO.json"
+          ></iframe>
+          <h1 class="post-heading txt-gradient">Posts</h1>
+          <div class="text-wrapper">
+            <p class="typewritter">
+              <i>These are some of the posts from my</i>
+              <a href="https://digitaledge72.blogspot.com/" target="_blank"
+                ><b>BLOG</b></a
+              >.
+            </p>
+          </div>
+        </div>
+        <div class="post-card1">
+          <img src="./assets/post1.webp" alt="first-post" />
+          <h4>Vim Basics</h4>
+          <span>January 11, 2024</span>
+          <p>
+            Vim is a highly configurable text editor that is known for its
+            efficiency and power. It was designed as a more advanced version of
+            the vi editor, which was included in Unix systems.....
+          </p>
+          <button class="read-more" type="button">
+            <a
+              href="https://digitaledge72.blogspot.com/2024/01/vim-basics.html"
+              target="_blank"
+              >Read More</a
+            >
+          </button>
+        </div>
+        <div class="post-card2">
+          <img src="./assets/post2.webp" alt="second-post" />
+          <h4>The Power Of CSS Grids</h4>
+          <span>January 20, 2024</span>
+          <p>
+            Welcome to the world of CSS Grid, where layout possibilities are
+            limitless! If you're ready to create sophisticated, responsive, and
+            visually captivating web designs, this powerful CSS property is your
+            key to success.....
+          </p>
+          <button class="read-more" type="button">
+            <a
+              href="https://digitaledge72.blogspot.com/2024/01/unlocking-power-of-css-grid-mastering.html"
+              target="_blank"
+              >Read More</a
+            >
+          </button>
+        </div>
+        <div class="post-card3">
+          <img src="./assets/post3.webp" alt="third-post" />
+          <h4>Web Dev Concepts</h4>
+          <span>January 06, 2024</span>
+          <p>
+            Web Dev is a tricky skill to learn and one may never be able to
+            fully learn it. But learning these concepts will at the very least
+            get you started on the right track.....
+          </p>
+          <button class="read-more" type="button">
+            <a
+              href="https://digitaledge72.blogspot.com/2024/01/web-development-essential-concepts.html"
+              target="_blank"
+              >Read More</a
+            >
+          </button>
+        </div>
+        <div class="post-card4">
+          <img src="./assets/post4.webp" alt="fourth-post" />
+          <h4>What is Docker?</h4>
+          <span>January 01, 2024</span>
+          <p>
+            Docker is a set of platform as a service products that use OS-level
+            virtualization to deliver software in packages called containers. It
+            basically bundles all your project as well as its dependencies so
+            anyone can use it in any device.....
+          </p>
+          <button class="read-more" type="button">
+            <a
+              href="https://digitaledge72.blogspot.com/2024/01/what-is-docker.html"
+              target="_blank"
+              >Read More</a
+            >
+          </button>
+        </div>
+      </section>
+    </main>
 
-	<main>
-		<iframe src="assets/bg.mp3" allow="autoplay" style="display: none" id="iframeAudio">
-		</iframe>
-		<div id="particles-js"></div>
-		<section class="blog">
-			<div class="heading-wrapper">
-				<iframe src="https://lottie.host/embed/323a9ca6-26ed-454f-a550-9731f5ddc85e/mqd6KkjrdO.json"></iframe>
-				<h1>Posts</h1>
-				<div class="text-wrapper">
-					<p class="typewritter">
-						<i>These are some of the posts from my</i>
-						<a href="https://digitaledge72.blogspot.com/" target="_blank"><b>BLOG</b></a>.
-					</p>
-				</div>
-			</div>
-			<div class="post-card1">
-				<img src="./assets/post1.webp" alt="first-post" />
-				<h4>Vim Basics</h4>
-				<span>January 11, 2024</span>
-				<p>
-					Vim is a highly configurable text editor that is known for its
-					efficiency and power. It was designed as a more advanced version of
-					the vi editor, which was included in Unix systems.....
-				</p>
-				<button class="read-more" type="button">
-					<a href="https://digitaledge72.blogspot.com/2024/01/vim-basics.html" target="_blank">Read More</a>
-				</button>
-			</div>
-			<div class="post-card2">
-				<img src="./assets/post2.webp" alt="second-post" />
-				<h4>The Power Of CSS Grids</h4>
-				<span>January 20, 2024</span>
-				<p>
-					Welcome to the world of CSS Grid, where layout possibilities are
-					limitless! If you're ready to create sophisticated, responsive, and
-					visually captivating web designs, this powerful CSS property is your
-					key to success.....
-				</p>
-				<button class="read-more" type="button">
-					<a href="https://digitaledge72.blogspot.com/2024/01/unlocking-power-of-css-grid-mastering.html"
-						target="_blank">Read More</a>
-				</button>
-			</div>
-			<div class="post-card3">
-				<img src="./assets/post3.webp" alt="third-post" />
-				<h4>Web Dev Concepts</h4>
-				<span>January 06, 2024</span>
-				<p>
-					Web Dev is a tricky skill to learn and one may never be able to
-					fully learn it. But learning these concepts will at the very least
-					get you started on the right track.....
-				</p>
-				<button class="read-more" type="button">
-					<a href="https://digitaledge72.blogspot.com/2024/01/web-development-essential-concepts.html"
-						target="_blank">Read More</a>
-				</button>
-			</div>
-			<div class="post-card4">
-				<img src="./assets/post4.webp" alt="fourth-post" />
-				<h4>What is Docker?</h4>
-				<span>January 01, 2024</span>
-				<p>
-					Docker is a set of platform as a service products that use OS-level
-					virtualization to deliver software in packages called containers. It
-					basically bundles all your project as well as its dependencies so
-					anyone can use it in any device.....
-				</p>
-				<button class="read-more" type="button">
-					<a href="https://digitaledge72.blogspot.com/2024/01/what-is-docker.html" target="_blank">Read More</a>
-				</button>
-			</div>
-		</section>
-	</main>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-	<script src="particles.js"></script>
-	<script src="app.js"></script>
-	<script src="script.js"></script>
-</body>
-
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

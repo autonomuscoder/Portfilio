@@ -107,7 +107,8 @@ body::-webkit-scrollbar-track {
   display: grid;
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
   backdrop-filter: blur(10px);
   transform: translateX(100%);
   z-index: 999;
@@ -162,6 +163,7 @@ body::-webkit-scrollbar-track {
 }
 .reveal {
   transform: translateX(0%);
+	margin: 1rem;
 }
 .hire-btn {
   background: transparent;

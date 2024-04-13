@@ -119,7 +119,8 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
   backdrop-filter: blur(10px);
   transform: translateX(100%);
   z-index: 999;
@@ -174,6 +175,7 @@ body::-webkit-scrollbar-thumb {
 }
 .reveal {
   transform: translateX(0%);
+	margin: 1rem;
 }
 .hire-btn {
   background: transparent;
@@ -250,6 +252,10 @@ iframe {
   padding: 3rem;
   margin-inline: auto;
   gap: 1.8rem;
+}
+.post-heading {
+	font-size: 2.2rem;
+	text-shadow: 0 0 1em var(--bg-clr);
 }
 .post-card1,
 .post-card2,

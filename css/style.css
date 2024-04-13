@@ -139,7 +139,8 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
   backdrop-filter: blur(10px);
   transform: translateX(100%);
   z-index: 999;
@@ -201,6 +202,7 @@ body::-webkit-scrollbar-thumb {
 }
 .reveal {
   transform: translateX(0%);
+	margin: 1rem;
 }
 #particles-js {
   position: fixed;
