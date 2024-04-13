@@ -108,7 +108,7 @@ body::-webkit-scrollbar-track {
   grid-template-rows: auto 1fr auto;
   row-gap: 1rem;
   background: rgba(0, 0, 0, 0.5);
-	border-radius: 20px;
+	border-radius: 20px 0 0 20px;
   backdrop-filter: blur(10px);
   transform: translateX(100%);
   z-index: 999;
@@ -163,19 +163,45 @@ body::-webkit-scrollbar-track {
 }
 .reveal {
   transform: translateX(0%);
-	margin: 1rem;
 }
+
 .hire-btn {
+  border: none;
+  color: #fff;
   background: transparent;
-  border: 1px solid #7dcfff;
-  padding: 0.325rem;
-  margin: 0.8rem 0.2rem;
-  scale: 1.1;
-  transition: all ease 0.3s;
+  border: solid 2px #7dcfff;
+  border-radius: 10px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 0.6em 1.5em;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
 }
+
 .hire-btn:hover {
   background: #7dcfff;
-  box-shadow: 0 0 1em #7dcfff;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
+
+  70% {
+    box-shadow: 0 0 0 1em rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
+.socials {
+	font-size: 2rem;
+	text-align: center;
 }
 .galaxy {
   width: 100%;
