@@ -414,16 +414,19 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   background: conic-gradient(
     from var(--gradient-angle),
-    #ad5389,
-    #3c1053,
-    #3c1053,
-    #ad5389
+    #0f2027,
+    #203a43,
+    #2c5364,
+    #2c5364,
+    #203a43,
+    #0f2027
   );
   animation: 8s linear infinite grad-rotate;
   border-radius: inherit;
   inset: -0.3rem;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.3;
+	backdrop-filter: blur(10px) brightness(120%);
 }
 
 .card::after {
