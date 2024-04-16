@@ -61,7 +61,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  font-family: "Space Mono", "sans-serif";
+  font-family: "Victor Mono", "sans-serif";
 }
 body::-webkit-scrollbar {
   width: 1rem;
